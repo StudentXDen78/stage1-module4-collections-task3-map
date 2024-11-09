@@ -7,6 +7,7 @@ import java.util.Objects;
 public class WordRepetitionMapCreator {
     public static Map<String, Integer> createWordRepetitionMap(String sentence) {
         Map<String, Integer> wordRepetitionMap = new HashMap<>();
+        if (sentence.isEmpty()) return wordRepetitionMap;
         String result = sentence.replaceAll("\\p{Punct}", "");
         String[] sentenceArr = result.split(" ");
 
